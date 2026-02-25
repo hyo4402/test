@@ -56,3 +56,12 @@ Built with React, Three.js, MediaPipe, and Tailwind CSS.
 - **Shader**: Custom GLSL shader
 - **Tracking**: @mediapipe/hands
 - **Styling**: Tailwind CSS
+
+## Deployment to GitHub Pages
+
+This project is configured to deploy to GitHub Pages under the `/test/` path by default (matching your repository name).
+
+If you deploy to a different repository name or custom domain:
+1. Open `vite.config.ts`.
+2. Update the `base` property to match your repository name (e.g., `base: '/my-repo-name/'`) or use `'/'` for root domain.
+3. Commit and push the changes.
