@@ -59,9 +59,18 @@ Built with React, Three.js, MediaPipe, and Tailwind CSS.
 
 ## Deployment to GitHub Pages
 
-This project is configured to deploy to GitHub Pages under the `/test/` path by default (matching your repository name).
+This project includes a **GitHub Action** to automatically build and deploy the application to GitHub Pages.
 
-If you deploy to a different repository name or custom domain:
-1. Open `vite.config.ts`.
-2. Update the `base` property to match your repository name (e.g., `base: '/my-repo-name/'`) or use `'/'` for root domain.
-3. Commit and push the changes.
+**Important:** To enable this workflow:
+
+1.  Go to your GitHub repository **Settings**.
+2.  Navigate to **Pages** (in the left sidebar).
+3.  Under **Build and deployment > Source**, select **GitHub Actions**.
+4.  Once you push this code, the Action will run automatically.
+5.  Wait a few minutes, then refresh the Pages settings to see your live URL.
+
+**Troubleshooting:**
+If you see a 404 error or a blank page, ensure:
+- The **Source** is set to **GitHub Actions**.
+- You have waited for the Action to complete (check the **Actions** tab).
+- The `base` path in `vite.config.ts` is set to `'./'` (which is already configured).
